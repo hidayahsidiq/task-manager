@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function showWeather(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
-    const apiKey = 'b129c14c640ddb12ac3f7dc22abc572d'; // Replace with your OpenWeatherMap API key
+    const apiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
     fetch(url)
