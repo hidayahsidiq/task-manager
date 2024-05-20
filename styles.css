@@ -12,7 +12,7 @@
   align-items: center;
   background :#fff;
   border: 2px solid rgb(223, 253, 2);
-  border-radius: 20px;
+  border-radius: 30px;
   padding: 10px 20px;
   
 }
@@ -24,6 +24,7 @@
 .logo img {
   width: 40%;
   height: auto;
+  margin-left: auto;
 }
 
 .menu {
@@ -54,6 +55,7 @@
   border: none;
   outline: none;
   align-items: flex-start;
+  margin-left: 5px;
 }
 
 .search i {
@@ -68,9 +70,76 @@
   font-size: 1.5em;
   cursor: pointer;
   border-color: aqua;
+  margin-left: auto;
   
 }
 
+canvas {
+  max-width: 20%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for desktop */
+.card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style for mobile */
+@media (max-width: 600px) {
+  .card {
+      padding: 10px;
+  }
+  .search {
+      display: flex;
+      flex-direction: row; /* Display items in a row */
+      justify-content: space-between; /* Space items horizontally */
+      align-items: center; /* Center items vertically */
+  }
+  .search input {
+      width: calc(100% - 60px); /* Adjust width of input */
+      margin-right: 10px; /* Add space between input and button */
+  }
+  .search button {    
+      width: 50px; /* Set width of button */
+      height: 40px;
+  }
+  .details {
+      display: flex;
+      flex-direction: column;
+  }
+  .column {
+      display: flex;
+      flex-direction: row; /* Display items in a row */
+      justify-content: space-between; /* Space items horizontally */
+      align-items: center; /* Center items vertically */
+      margin-bottom: 10px;
+  }
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+#loading {
+  font-size: 18px;
+  color: #007BFF;
+}
+
+#weatherIcon {
+  width: 100px;
+  height: 100px;
+}
 
 #task-manager {
     width: 300px;
@@ -122,3 +191,13 @@
   .task-done {
     text-decoration: line-through;
   }
+
+  /* Improved CSS */
+.footer {
+  background-color: #00AEEF; /* Use a specific blue color instead of just "blue" */
+  border-radius: 30px;
+  color: #FFFFFF; /* Use a specific white color instead of just "white" */
+  padding: 10px; /* Add some padding to make the footer more readable */
+  text-align: center; /* Center the text horizontally */
+  font-size: 10px; /* Specify a font size for better readability */
+}
