@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
  
 <div class="navbar">
@@ -21,18 +22,35 @@
     <a href="#social">Social</a>
   </div>
   <div class="search">
-    <input type="text" placeholder="Search">
+    <input type="text" placeholder="Search. .">
     <i class="fas fa-search"></i>
   </div>
-  
+  <span>
   <div class="chat">
     <a href="#chat"><i class="fas fa-comment"></i></a>
-  </div>
+  </div></span>
   
 </div>         
         
     
     <main>
+      
+        
+          <!-- weather--> 
+          <!-- radar chart for user stats -->
+          <canvas id="myRadarChart"></canvas>
+          <div class="container">
+              <h1>Weather Update</h1>
+                <div id="weatherResult" class="hidden">
+                  <h2>Weather in <span id="cityName"></span></h2>
+                  <img id="weatherIcon" alt="Weather Icon">
+                  <p><strong>Temperature:</strong> <span id="temperature"></span>°C</p>
+                  <p><strong>Weather:</strong> <span id="weatherDescription"></span></p>
+                </div>
+              <div id="loading" class="hidden">Loading...</div>
+          </div>
+     
+      
         <div class="task-form">
             <input type="text" id="task" placeholder="Enter task...">
             <select id="priority">
@@ -46,8 +64,12 @@
         <div class="task-list" id="task-list">
             <!-- Tasks will be added here dynamically -->
         </div>
-        <script src="script.js"></script>
+        
     </main>
+    <footer class="footer">
+      <p>&copy; PT. PLN (Persero) All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
  
 </html>
