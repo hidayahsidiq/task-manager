@@ -1,3 +1,14 @@
+//javascript to user get attention
+let docTitle = document.title;
+window.addEventListener("blur", () =>{
+    document.title = "Come Back";
+})
+
+window.addEventListener("focus", () =>{
+    document.title =docTitle;
+})
+
+//javascript to get radarchart
 const data = {
   labels: ['Amanah', 'Kompeten', 'Harmonis', 'Loyal', 'Adaptif', 'Kolaboratif'],
   datasets: [{
@@ -22,20 +33,21 @@ const config = {
       scales: {
           r: {
               angleLines: {
-                  display: true
+                  display: false,
               },
+              
               suggestedMin: 0,
               suggestedMax: 5
           }
       },
       plugins: {
           legend: {
-              display: true,
+              display: false,
               position: 'top'
           },
           title: {
-              display: true,
-              text: ''
+              display: false,
+              text: 'Mystats'
           }
       }
   }
@@ -46,6 +58,8 @@ const myRadarChart = new Chart(
   config
 );
 
+
+//javascript geolocation to weather
 document.addEventListener('DOMContentLoaded', () => {
     if (navigator.geolocation) {
         document.getElementById('loading').classList.remove('hidden');
@@ -58,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function showWeather(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
-    const apiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
+    const apiKey = 'OpenWeatherMap API key'; // Replace with your OpenWeatherMap API key
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
     fetch(url)
@@ -102,6 +116,26 @@ function showError(error) {
             break;
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    function updateClockAndDate() {
+        const now = new Date();
+
+        const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const dateString = now.toLocaleDateString('en-US', dateOptions);
+        document.getElementById('date').textContent = dateString;
+
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        const timeString = `${hours}:${minutes}:${seconds}`;
+        document.getElementById('clock').textContent = timeString;
+    }
+
+    setInterval(updateClockAndDate, 1000);
+
+    updateClockAndDate(); // Initial call to display the correct time and date immediately
+});
 
 
 document.getElementById('new-task-button').addEventListener('click', function() {
