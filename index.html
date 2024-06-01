@@ -8,7 +8,7 @@
     <title>Task Scheduler</title>
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
  
@@ -23,33 +23,52 @@
   </div>
   <div class="search">
     <input type="text" placeholder="Search. .">
-    <i class="fas fa-search"></i>
+    <i class="material-symbols-outlined">search</i>
   </div>
-  <span>
-  <div class="chat">
-    <a href="#chat"><i class="fas fa-comment"></i></a>
-  </div></span>
-  
-</div>         
-        
-    
+    <span>
+      <div class="chat">
+        <a href="#chat"><i class="material-symbols-outlined">chat</i></a>
+      </div>
+    </span>
+</div>  
+
     <main>
-      
-        
           <!-- weather--> 
           <!-- radar chart for user stats -->
-          <canvas id="myRadarChart"></canvas>
+          
           <div class="container">
-              <h1>Weather Update</h1>
-                <div id="weatherResult" class="hidden">
-                  <h2>Weather in <span id="cityName"></span></h2>
-                  <img id="weatherIcon" alt="Weather Icon">
-                  <p><strong>Temperature:</strong> <span id="temperature"></span>°C</p>
-                  <p><strong>Weather:</strong> <span id="weatherDescription"></span></p>
+            <div class ="top">
+              <div class="profile-card">
+                <div class="profile-image-container">
+                    <img src="user profile.jpg" alt="Profile Picture" class="profile-pic">
+                    <div class="username">John Doe</div>
                 </div>
+                <div class="level-container">
+                    <div class="level-label">
+                      <p>Level Progress</p>
+                      <p>Exp</p>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+
+              <div class="radar-chart-container">
+              <canvas id="myRadarChart"></canvas></div>
+              <div id="date"></div>
+              <div id="clock"></div>
+              <div id="weatherResult" class="hidden">
+                  <h2><span id="cityName"></span></h2>
+                  <img id="weatherIcon" alt="Weather Icon">
+                  <p style="color: white;"><span id="temperature"></span>°C</p>
+                  <p><span id="weatherDescription"></span></p>
+              </div>
               <div id="loading" class="hidden">Loading...</div>
+            </div> 
           </div>
-     
+          
+          <!-- end code -->
       
         <div class="task-form">
             <input type="text" id="task" placeholder="Enter task...">
