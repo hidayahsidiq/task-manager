@@ -156,16 +156,26 @@ canvas {
 }
 
 .username {
-  position: absolute;
+  
   bottom: -35px;
   left: 50%;
-  transform: translateX(-50%);
   background: none;
   padding: 2px 5px;
-  border-radius: 5px;
   font-size: 14px;
   color: #FFFFFF;
 }
+
+.user-position{
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.user-office{
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+
 
 .level-container {
   flex-grow: 1;
@@ -252,6 +262,42 @@ h2{
   font-weight: bold;
   color: #ffffff;
   justify-content: space-between;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
 }
 
 #task-manager {
