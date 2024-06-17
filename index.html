@@ -40,10 +40,13 @@
             <div class ="top">
               <div class="profile-card">
                 <div class="profile-image-container">
-                    <img src="user profile.jpg" alt="Profile Picture" class="profile-pic">
+                    <img src="welder.png" alt="Profile Picture" class="profile-pic">
                     <div class="username">John Doe</div>
+                    <div class="user-position">Officer Kinerja</div>
+                    <div class="user-office">ULP Cikedung</div>
+                    
                 </div>
-                <div class="level-container">
+              <div class="level-container">
                     <div class="level-label">
                       <p>Level Progress</p>
                       <p>Exp</p>
@@ -51,8 +54,8 @@
                     <div class="progress-bar">
                         <div class="progress" style="width: 70%;"></div>
                     </div>
-                </div>
-            </div>
+              </div>
+          </div>
 
               <div class="radar-chart-container">
               <canvas id="myRadarChart"></canvas></div>
@@ -69,6 +72,30 @@
           </div>
           
           <!-- end code -->
+
+          <!--tab for task manager-->
+        <div class="tab">
+          <button class="tablinks" onclick="openTab(event, 'Task')">Task</button>
+          <button class="tablinks" onclick="openTab(event, 'Report')">Report</button>
+          <button class="tablinks" onclick="openTab(event, 'Summary')">Summary</button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="Task" class="tabcontent">
+          <h3>London</h3>
+            <p>London is the capital city of England.</p>
+        </div>
+
+        <div id="Report" class="tabcontent">
+          <h3>Paris</h3>
+            <p>Paris is the capital of France.</p>
+        </div>
+
+        <div id="Summary" class="tabcontent">
+          <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+          <!--end code-->
       
         <div class="task-form">
             <input type="text" id="task" placeholder="Enter task...">
